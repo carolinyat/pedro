@@ -2,108 +2,123 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Conchinha</title>
+  <title>Aniversário da Carol</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 0;
-      background: pink;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      overflow: hidden;
-      font-family: 'Arial', sans-serif;
+      background: radial-gradient(ellipse at center, #0a0a0a 0%, #000000 100%);
+      color: silver;
+      font-family: 'Cinzel Decorative', cursive;
+      overflow-x: hidden;
+      position: relative;
     }
 
     h1 {
-      color: white;
-      font-size: 2.5em;
-      text-shadow: 2px 2px 5px #ff69b4;
-      margin-bottom: 20px;
+      text-align: center;
+      font-size: 3.5em;
+      margin-top: 40px;
+      color: #e6e6e6;
+      text-shadow: 
+        0 0 5px #aaa, 
+        0 0 10px #999, 
+        0 0 20px #888, 
+        0 0 30px #fff;
     }
 
-    .hearts {
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 50px auto;
+      gap: 25px;
+      max-width: 1400px;
+    }
+
+    .gallery img {
+      width: 260px;
+      border-radius: 12px;
+      border: 2px solid #555;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+    }
+
+    .gallery img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 30px #bdbdbd;
+    }
+
+    .bat, .cross {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      opacity: 0.3;
       pointer-events: none;
+      animation: float 10s infinite ease-in-out;
       z-index: 0;
     }
 
-    .heart {
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background-color: red;
-      transform: rotate(45deg);
-      animation: float 6s infinite ease-in-out;
+    .bat {
+      background: url('https://cdn-icons-png.flaticon.com/512/616/616554.png') no-repeat center;
+      background-size: contain;
     }
 
-    .heart::before,
-    .heart::after {
-      content: "";
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background-color: red;
-      border-radius: 50%;
-    }
-
-    .heart::before {
-      top: -10px;
-      left: 0;
-    }
-
-    .heart::after {
-      top: 0;
-      left: -10px;
+    .cross {
+      background: url('https://cdn-icons-png.flaticon.com/512/181/181504.png') no-repeat center;
+      background-size: contain;
     }
 
     @keyframes float {
-      0% {
-        transform: translateY(100vh) scale(1) rotate(45deg);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(-100vh) scale(1.5) rotate(45deg);
-        opacity: 0;
-      }
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
     }
 
-    img {
-      width: 300px;
-      border-radius: 20px;
-      z-index: 1;
-      box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
+    /* YouTube audio - invisible */
+    iframe {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border: 0;
     }
   </style>
 </head>
 <body>
-  <h1>vem dormir de conchinha comigo?</h1>
-  <img src="assets/himiko.jpeg" alt="Himiko Toga">
-  <div class="hearts" id="hearts"></div>
+  <h1>dress code para o aniversário da Carol:</h1>
 
+  <div class="gallery">
+    <img src="https://i.pinimg.com/564x/43/03/b2/4303b23215524ea274f7c46c88c6ae37.jpg" alt="Gótica 1">
+    <img src="https://i.pinimg.com/564x/7c/02/fc/7c02fc992e7c31dfb05ebd37a27cf3ed.jpg" alt="Gótica 2">
+    <img src="https://i.pinimg.com/564x/0f/5e/3f/0f5e3fdfb70520f1e7d8f2b42464e2a4.jpg" alt="Gótica 3">
+    <img src="https://i.pinimg.com/564x/f9/42/32/f94232c98cb16e7baf378e1a30e220f3.jpg" alt="Gótica 4">
+    <img src="https://i.pinimg.com/564x/aa/1e/31/aa1e317b41f122fa34c8fdbb6218f41e.jpg" alt="Gótica 5">
+    <img src="https://i.pinimg.com/564x/96/65/9a/96659ad356896e4935d1480e34343a24.jpg" alt="Gótica 6">
+    <img src="https://i.pinimg.com/564x/f3/c6/f7/f3c6f7a62d3f12ae9f5d3a3b6a4f0e0f.jpg" alt="Gótica 7">
+    <img src="https://i.pinimg.com/564x/46/c6/11/46c611cb7e5bd10f705f6c77a659e244.jpg" alt="Gótica 8">
+    <img src="https://i.pinimg.com/564x/3f/55/eb/3f55eb63b23880cf7c3e4b27d4523a9b.jpg" alt="Gótica 9">
+    <img src="https://i.pinimg.com/564x/11/1b/63/111b634b8f34cf5fc38a3776b1cfb27b.jpg" alt="Gótica 10">
+  </div>
+
+  <!-- Música de fundo -->
+  <iframe 
+    src="https://www.youtube.com/embed/OpC2N5bTLfI?autoplay=1&loop=1&playlist=OpC2N5bTLfI"
+    allow="autoplay"
+  ></iframe>
+
+  <!-- Morcegos e cruzes -->
   <script>
-    const heartsContainer = document.getElementById('hearts');
-
-    function createHeart() {
-      const heart = document.createElement('div');
-      heart.classList.add('heart');
-      heart.style.left = Math.random() * 100 + 'vw';
-      heart.style.animationDuration = 4 + Math.random() * 4 + 's';
-      heart.style.backgroundColor = ['#ff4d6d', '#ff6b81', '#ff85a1'][Math.floor(Math.random() * 3)];
-      heartsContainer.appendChild(heart);
-
-      setTimeout(() => {
-        heart.remove();
-      }, 8000);
+    function createDeco(type) {
+      const deco = document.createElement('div');
+      deco.classList.add(type);
+      deco.style.top = Math.random() * 100 + 'vh';
+      deco.style.left = Math.random() * 100 + 'vw';
+      deco.style.width = (25 + Math.random() * 40) + 'px';
+      document.body.appendChild(deco);
     }
 
-    setInterval(createHeart, 300);
+    for (let i = 0; i < 25; i++) {
+      createDeco('bat');
+      createDeco('cross');
+    }
   </script>
 </body>
 </html>
