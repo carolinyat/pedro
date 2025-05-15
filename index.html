@@ -1,124 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Aniversário da Carol</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eu Te Amo</title>
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      padding: 0;
-      background: radial-gradient(ellipse at center, #0a0a0a 0%, #000000 100%);
-      color: silver;
-      font-family: 'Cinzel Decorative', cursive;
-      overflow-x: hidden;
-      position: relative;
-    }
-
-    h1 {
-      text-align: center;
-      font-size: 3.5em;
-      margin-top: 40px;
-      color: #e6e6e6;
-      text-shadow: 
-        0 0 5px #aaa, 
-        0 0 10px #999, 
-        0 0 20px #888, 
-        0 0 30px #fff;
-    }
-
-    .gallery {
+      height: 100vh;
+      background: #000000;
+      color: #a60000;
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      margin: 50px auto;
-      gap: 25px;
-      max-width: 1400px;
-    }
-
-    .gallery img {
-      width: 260px;
-      border-radius: 12px;
-      border: 2px solid #555;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
-    }
-
-    .gallery img:hover {
-      transform: scale(1.08);
-      box-shadow: 0 0 30px #bdbdbd;
-    }
-
-    .bat, .cross {
-      position: absolute;
-      opacity: 0.3;
-      pointer-events: none;
-      animation: float 10s infinite ease-in-out;
-      z-index: 0;
-    }
-
-    .bat {
-      background: url('https://cdn-icons-png.flaticon.com/512/616/616554.png') no-repeat center;
-      background-size: contain;
-    }
-
-    .cross {
-      background: url('https://cdn-icons-png.flaticon.com/512/181/181504.png') no-repeat center;
-      background-size: contain;
-    }
-
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
-      100% { transform: translateY(0); }
-    }
-
-    /* YouTube audio - invisible */
-    iframe {
-      position: absolute;
-      width: 0;
-      height: 0;
-      border: 0;
+      align-items: center;
+      font-family: 'UnifrakturCook', cursive;
+      font-size: 4rem;
+      text-shadow: 0 0 10px #ff0000, 0 0 20px #770000;
+      background-image: url('https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2');
+      background-size: cover;
+      background-blend-mode: multiply;
     }
   </style>
 </head>
 <body>
-  <h1>dress code para o aniversário da Carol:</h1>
-
-  <div class="gallery">
-    <img src="https://i.pinimg.com/564x/43/03/b2/4303b23215524ea274f7c46c88c6ae37.jpg" alt="Gótica 1">
-    <img src="https://i.pinimg.com/564x/7c/02/fc/7c02fc992e7c31dfb05ebd37a27cf3ed.jpg" alt="Gótica 2">
-    <img src="https://i.pinimg.com/564x/0f/5e/3f/0f5e3fdfb70520f1e7d8f2b42464e2a4.jpg" alt="Gótica 3">
-    <img src="https://i.pinimg.com/564x/f9/42/32/f94232c98cb16e7baf378e1a30e220f3.jpg" alt="Gótica 4">
-    <img src="https://i.pinimg.com/564x/aa/1e/31/aa1e317b41f122fa34c8fdbb6218f41e.jpg" alt="Gótica 5">
-    <img src="https://i.pinimg.com/564x/96/65/9a/96659ad356896e4935d1480e34343a24.jpg" alt="Gótica 6">
-    <img src="https://i.pinimg.com/564x/f3/c6/f7/f3c6f7a62d3f12ae9f5d3a3b6a4f0e0f.jpg" alt="Gótica 7">
-    <img src="https://i.pinimg.com/564x/46/c6/11/46c611cb7e5bd10f705f6c77a659e244.jpg" alt="Gótica 8">
-    <img src="https://i.pinimg.com/564x/3f/55/eb/3f55eb63b23880cf7c3e4b27d4523a9b.jpg" alt="Gótica 9">
-    <img src="https://i.pinimg.com/564x/11/1b/63/111b634b8f34cf5fc38a3776b1cfb27b.jpg" alt="Gótica 10">
-  </div>
-
-  <!-- Música de fundo -->
-  <iframe 
-    src="https://www.youtube.com/embed/OpC2N5bTLfI?autoplay=1&loop=1&playlist=OpC2N5bTLfI"
-    allow="autoplay"
-  ></iframe>
-
-  <!-- Morcegos e cruzes -->
-  <script>
-    function createDeco(type) {
-      const deco = document.createElement('div');
-      deco.classList.add(type);
-      deco.style.top = Math.random() * 100 + 'vh';
-      deco.style.left = Math.random() * 100 + 'vw';
-      deco.style.width = (25 + Math.random() * 40) + 'px';
-      document.body.appendChild(deco);
-    }
-
-    for (let i = 0; i < 25; i++) {
-      createDeco('bat');
-      createDeco('cross');
-    }
-  </script>
+  <div>🖤 Eu Te Amo 🖤</div>
 </body>
 </html>
